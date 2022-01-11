@@ -15,17 +15,18 @@ public class FahrenheitCelsius{
       *  @param args ...
       */
      public static void main(String[] args){
-       try{
-            for (int i=0; i<args.length; i++){ 
-            int fahrenheit = Integer.parseInt(args[i]);
-            float celsius = fahrenheitEnCelsius(fahrenheit);
-            System.out.println(fahrenheit + "\u00B0F -> " + celsius + "\u00B0C"); 
-            }      
-      
-       }catch(NumberFormatException nfe){
-           System.out.println("error : " + nfe.getMessage());// en cas d'erreur 
-       }
-       
+        for (int i=0; i<args.length; i++){
+           try{
+                 
+                int fahrenheit = Integer.parseInt(args[i]);
+                float celsius = fahrenheitEnCelsius(fahrenheit);
+                System.out.println(fahrenheit + "\u00B0F -> " + celsius + "\u00B0C"); 
+                      
+          
+           }catch(NumberFormatException nfe){
+               System.out.println("error : " + nfe.getMessage());// en cas d'erreur 
+           }
+        }
      }
      
      /** 
